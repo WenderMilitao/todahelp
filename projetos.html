@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <title>ONG TodaHelp</title>
+  </head>
+  <body>
+    <header>
+      <!-- Cabeçalho do site -->
+      <picture>
+        <source srcset="./assets/img/logo.webp" type="image/webp">
+        <source srcset="./assets/img/logo.png" type="image/png">
+        <img
+          src="./assets/img/logo.png"
+          width="80"
+          alt="Logo da ONG TodaHelp, nome em preto e logo em verde com desenho de um globo, uma pessoa e um cão">
+      </picture>
+      <nav>
+        <ul>
+        <li><a href="./index.html">Página inicial</a></li>
+        <li><a href="./projetos.html">Projetos Sociais</a></li>
+        <li><a href="./cadastro.html">Cadastro</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!-- Conteúdo principal da página -->
+      <section id="projetos">
+        <h2>Projetos</h2>
+        <article>
+          <h3>Ação com moradores de rua</h3>
+          <p>Distribuímos refeições e roupas toda semana.</p>
+          <picture>
+            <source srcset="./assets/img/adultos.webp" type="image/webp">
+            <source srcset="./assets/img/adultos.jpg" type="image/jpeg">
+            <img
+              src="./assets/img/adultos.jpg"
+              alt="Voluntários da ONG TodaHelp entregando alimentos e roupas a moradores de rua">
+          </picture>
+        </article>
+        <article>
+          <h3>Feira de adoção</h3>
+          <p>Resgatamos animais e promovemos adoções responsáveis.</p>
+          <picture>
+            <source srcset="./assets/img/animais.webp" type="image/webp">
+            <source srcset="./assets/img/animais.jpg" type="image/jpeg">
+            <img
+              src="./assets/img/animais.jpg"
+              alt="Voluntários da ONG TodaHelp acariciando cães de rua">
+          </picture>
+        </article>
+        <article>
+          <h3>Ação na comunidade</h3>
+          <p>
+            Apoiamos crianças da comunidade por meio da doação de roupas,
+            alimentos e brinquedos.
+          </p>
+          <picture>
+            <source srcset="./assets/img/criancas.webp" type="image/webp">
+            <source srcset="./assets/img/criancas.jpg" type="image/jpeg">
+            <img
+              src="./assets/img/criancas.jpg"
+              alt="Voluntários da ONG TodaHelp ajudando crianças da comunidade">
+          </picture>
+        </article>
+      </section>
+        <form>
+          <fieldset>
+            <legend>Doação</legend>
+            <picture>
+              <source srcset="./assets/img/doacao.webp" type="image/webp">
+              <source srcset="./assets/img/doacao.png" type="image/png">
+              <img
+                src="./assets/img/doacao.png"
+                width="250"
+                alt="Logo da ONG TodaHelp, nome da ONG e em baixo escrito obrigado pela doação em preto e logo em verde com desenho de um globo, uma pessoa e um cão">
+            </picture>
+            <label for="doacao">Valor: </label>
+            <input
+              type="number"
+              id="doacao"
+              name="doacao"
+              min="1"
+              step="0.01"
+              placeholder="R$ 10,00"
+              required>
+            <br>
+            <br>
+            <button type="submit">Doar</button>
+          </fieldset>
+        </form>
+    </main>
+    <footer>
+      <!-- Rodapé -->
+      <p>&copy; 2025 TodaHelp. Todos os direitos reservados.</p>
+    </footer>
+  </body>
+</html>
