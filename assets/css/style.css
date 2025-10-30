@@ -129,6 +129,20 @@ footer {
   border-radius: var(--espaco-8);
   border: 1px solid var(--cor-primaria-escura);
 }
+
+.skip-link{
+  text-decoration: none;
+  color: var(--cor-neutra-100);
+  padding: var(--espaco-8) var(--espaco-16);
+  background-color: var(--cor-primaria);
+  font-size: var(--fonte-tamanho-xl);
+  font-weight: bold;
+  border-radius: var(--espaco-8);
+  border: 2px solid var(--cor-primaria);
+  cursor: pointer;
+  display: block;
+}
+
 /* ===============================
    RESET BASICO
    =============================== */
@@ -160,7 +174,7 @@ footer {
 }
 
 .nav-menu li {
-  position: relative; 
+  position: relative;
 }
 
 .nav-menu li button {
@@ -178,8 +192,8 @@ footer {
 
 .nav-menu li ul {
   display: none;
-  position: absolute; 
-  top: 100%; 
+  position: absolute;
+  top: 100%;
   left: 0;
   background-color: var(--cor-primaria);
   color: var(--cor-neutra-100);
@@ -197,7 +211,7 @@ footer {
 }
 
 .nav-menu li:hover > ul {
-  display: block; 
+  display: block;
 }
 
 .nav-menu li button:hover {
@@ -257,7 +271,7 @@ footer {
 .input {
   text-align: center;
   width: 80%;
-  max-width: 100%; 
+  max-width: 100%;
   border: 1px solid var(--cor-neutra-500);
   border-radius: var(--espaco-8);
   padding: var(--espaco-8) var(--espaco-8);
@@ -268,7 +282,7 @@ footer {
 .inputDoacao{
   text-align: center;
   width: 30%;
-  max-width: 100%; 
+  max-width: 100%;
   border: 1px solid var(--cor-neutra-500);
   border-radius: var(--espaco-8);
   padding: var(--espaco-8) var(--espaco-8);
@@ -297,11 +311,11 @@ footer {
 }
 
 #alerta-sucesso {
-  background-color: #4caf50; 
+  background-color: #4caf50;
 }
 
 #alerta-erro {
-  background-color: #f44336; 
+  background-color: #f44336;
 }
 
 .alerta.visivel {
@@ -401,7 +415,7 @@ footer {
     padding: 0 var(--espaco-16);
     font-size: var(--fonte-tamanho-lg);
   }
-  
+
   .badge {
   font-size: var(--fonte-tamanho-xl);
   }
@@ -418,7 +432,7 @@ footer {
     padding: var(--espaco-16);
   }
 
-  
+
   html, body {
     height: 100%;
   }
@@ -463,7 +477,7 @@ footer {
     gap: var(--espaco-8);
   }
 
- 
+
   html, body {
     height: 100%;
   }
@@ -514,3 +528,50 @@ footer {
     width: 100%;
   }
 }
+
+/* ===============================
+   ACESSIBILIDADE E CONTRASTE
+   =============================== */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 8px;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  z-index: 1000;
+}
+.skip-link:focus {
+  top: 8px;
+}
+
+:focus {
+  outline: 3px solid var(--cor-secundaria);
+  outline-offset: 2px;
+}
+
+/* MODO ALTO CONTRASTE */
+:root.high-contrast {
+  --cor-primaria: #000000;
+  --cor-primaria-clara: #000000;
+  --cor-primaria-escura: #000000;
+  --cor-neutra-100: #ffffff;
+  --cor-neutra-500: #ffffff;
+}
+
+/* MODO ESCURO (automático) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --cor-primaria: #2a6d6d;
+    --cor-primaria-clara: #4cb1b1;
+    --cor-primaria-escura: #1b4d4d;
+    --cor-neutra-100: #eaeaea;
+    --cor-neutra-200: #1a1a1a;
+  }
+
+  body {
+    background: var(--cor-neutra-200);
+    color: var(--cor-neutra-100);
+  }
+}
+

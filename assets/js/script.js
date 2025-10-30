@@ -222,6 +222,11 @@ function templateDoacao() {
   `;
 };
 
+document.getElementById('toggle-contrast').addEventListener('click', function(){
+    const hc = document.documentElement.classList.toggle('high-contrast');
+    this.setAttribute('aria-pressed', hc);
+  });
+
 function carregarPagina(pagina){
   const app = document.getElementById("app");
 
@@ -249,6 +254,10 @@ function carregarPagina(pagina){
       validarCadastro(e.target);
     });
   };
+
+  app.setAttribute("tabindex", "-1");
+  app.focus();
+
 };
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -282,7 +291,7 @@ function validarCadastro(form){
    alert("Número de CPF inválido!");
   return;
   };
-  
+
   const regexTelefone = /^\(\d{2}\)\s?\d{4,5}-\d{4}$/;
 
   if (!regexTelefone.test(telefone)) {
@@ -299,8 +308,8 @@ function validarCadastro(form){
 
   const rejeitaNumero = /^[A-Za-zÀ-ÿ\s]+$/;
 
-  if (!rejeitaNumero.test(nome) || 
-      !rejeitaNumero.test(cidade) || 
+  if (!rejeitaNumero.test(nome) ||
+      !rejeitaNumero.test(cidade) ||
       !rejeitaNumero.test(estado)) {
     alert(`Apenas letras são permitidas nos campos:
   Nome
@@ -332,10 +341,12 @@ function mostrarAlerta(tipo) {
   } else if (tipo === 'erro') {
     alertaErro.classList.add('visivel');
   };
- 
+
   setTimeout(() => {
     alertaSucesso.classList.remove('visivel');
     alertaErro.classList.remove('visivel');
   }, 8000);
 };
+
+
 
