@@ -163,10 +163,16 @@ footer {
   position: relative; 
 }
 
-.nav-menu li a {
+.nav-menu li button {
   text-decoration: none;
   color: var(--cor-neutra-100);
   padding: var(--espaco-8) var(--espaco-16);
+  background-color: var(--cor-primaria);
+  font-size: var(--fonte-tamanho-xl);
+  font-weight: bold;
+  border-radius: var(--espaco-8);
+  border: 2px solid var(--cor-primaria);
+  cursor: pointer;
   display: block;
 }
 
@@ -185,7 +191,7 @@ footer {
   margin-left: var(--espaco-64);
 }
 
-.nav-menu li ul li a {
+.nav-menu li ul li button {
   padding: var(--espaco-8) var(--espaco-16);
   color: var(--cor-neutra-100);
 }
@@ -194,7 +200,7 @@ footer {
   display: block; 
 }
 
-.nav-menu li a:hover {
+.nav-menu li button:hover {
   background-color: var(--cor-primaria-clara);
   color: var(--cor-neutra-500);
   border-radius: var(--espaco-8);
@@ -255,18 +261,18 @@ footer {
   border: 1px solid var(--cor-neutra-500);
   border-radius: var(--espaco-8);
   padding: var(--espaco-8) var(--espaco-8);
-  font-size: var(--fonte-tamanho-xxl);
+  font-size: var(--fonte-tamanho-lg);
   background-color: var(--cor-neutra-200);
 }
 
 .inputDoacao{
   text-align: center;
   width: 30%;
-  max-width: 1800%; 
+  max-width: 100%; 
   border: 1px solid var(--cor-neutra-500);
   border-radius: var(--espaco-8);
   padding: var(--espaco-8) var(--espaco-8);
-  font-size: var(--fonte-tamanho-xxl);
+  font-size: var(--fonte-tamanho-lg);
   background-color: var(--cor-neutra-200);
 }
 
@@ -279,21 +285,28 @@ footer {
    ALERTAS/TOASTS
    =============================== */
 .alerta {
-  display: none; // quando integrar o JavaScript irei retirar essa linha
-  padding: var(--espaco-16);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease;
+  padding: var(--espaco-8);
   border-radius: 4px;
-  margin-bottom: var(--espaco-16);
+  /* margin-bottom: var(--espaco-16); */
   color: var(--cor-neutra-100);
   font-size: var(--fonte-tamanho-xl);
   font-weight: bold;
 }
 
-.alerta-sucesso {
+#alerta-sucesso {
   background-color: #4caf50; 
 }
 
-.alerta-erro {
+#alerta-erro {
   background-color: #f44336; 
+}
+
+.alerta.visivel {
+  opacity: 1;
+  visibility: visible;
 }
 
 /* ===============================
@@ -313,7 +326,7 @@ footer {
 /* ===============================
    RESPONSIVO - BREAKPOINTS
    =============================== */
-@media (min-width: 1200px) and (max-width: 1600px) {
+@media (min-width: 1200px) and (max-width: 3000px) {
   .container {
     grid-template-columns: 1fr;
     gap: var(--espaco-24);
@@ -349,7 +362,7 @@ footer {
   }
 
   img {
-    width: 100%;
+    width: 50%;
   }
 }
 
@@ -394,7 +407,7 @@ footer {
   }
 
   img {
-    width: 100%;
+    width: 50%;
   }
 }
 

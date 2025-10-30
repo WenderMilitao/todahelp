@@ -16,59 +16,30 @@
             <nav>
                 <ul class="nav-menu">
                     <li>
-                        <a href="./index.html">Página inicial</a>
+                        <button onclick="carregarPagina('index')">Página inicial</button>
                     </li>
                     <li>
-                        <a href="#">Projetos Sociais ▾</a>
+                        <button onclick=" ">Projetos Sociais ▾</button>
                         <ul id="dropdown">
                             <li>
-                                <a href="./humanos.html">Humanos</a>
+                                <button onclick="carregarPagina('humanos')">Humanos</button>
                             </li>
                             <li>
-                                <a href="./animais.html">Animais</a>
+                                <button onclick="carregarPagina('animais')">Animais</button>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a href="./cadastro.html">Cadastro</a>
+                        <button onclick="carregarPagina('cadastro')">Cadastro</button>
                     </li>
                     <li>
-                        <a href="./doacao.html">Doacao</a>
+                        <button onclick="carregarPagina('doacao')">Doacao</button>
                     </li>
                 </ul>
             </nav>
         </header>
-        <main class="card">
+        <main id="app" class="card">
             <!-- Conteúdo principal da página -->
-            <picture>
-                <source srcset="./assets/img/logo.webp" type="image/webp">
-                <source srcset="./assets/img/logo.png" type="image/png">
-                <img id="LogoInicio" src="./assets/img/logo.png" alt="Logo da ONG TodaHelp, nome em preto e logo em verde com desenho de um globo, uma pessoa e um cão">
-            </picture>
-            <section id="inicio">
-                <h2>Sobre a ONG TodaHelp</h2>
-                <p>
-                    A TodaHelp ajuda pessoas e animais em situação de vulnerabilidade,
-          oferecendo apoio, cuidado e oportunidades para uma vida mais digna.
-          Nosso trabalho vai além da assistência imediata: buscamos promover
-          inclusão, bem-estar e conscientização, engajando a comunidade em ações
-          solidárias. Com a colaboração de voluntários, doadores e parceiros,
-          transformamos pequenos gestos em grandes mudanças, garantindo que
-          ninguém seja deixado para trás.
-                </p>
-                <p>
-                    Ao clicar em “Projetos”, você poderá conhecer mais sobre as nossas
-          ações e sentir de perto o impacto positivo que cada iniciativa gera na
-          vida de pessoas e animais. Se desejar, também pode apoiar nossas
-          causas com uma doação, pois cada contribuição ajuda a levar esperança,
-          cuidado e novas oportunidades para quem mais precisa.
-                </p>
-                <p>
-                    Você também pode fazer parte dessa transformação! Clique em “Cadastro”
-          e junte-se a nós nessa corrente do bem. Seja voluntário e ajude a
-          construir um mundo mais justo, acolhedor e cheio de esperança.
-                </p>
-            </section>
         </main>
         <footer>
             <!-- Rodapé -->
@@ -80,5 +51,6 @@
             </section>
             <p>&copy; 2025 TodaHelp. Todos os direitos reservados.</p>
         </footer>
+        <script src="./assets/js/script.js"></script>
     </body>
 </html>
