@@ -1,0 +1,24 @@
+{
+  "name": "todahelp",
+  "version": "1.1.0",
+  "description": "Site da ONG TodaHelp - apoio a pessoas e animais em situação de vulnerabilidade",
+  "private": true,
+  "scripts": {
+    "build:css": "postcss assets/css/style.css -o dist/assets/css/style.min.css --env production",
+    "build:js": "terser assets/js/script.js -c -m -o dist/assets/js/script.min.js",
+    "build:html": "html-minifier --collapse-whitespace --remove-comments index.html -o dist/index.html",
+    "build:images": "imagemin assets/img/* --out-dir=dist/assets/img",
+    "build": "npm run build:css && npm run build:js && npm run build:html && npm run build:images"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.0.0",
+    "cssnano": "^5.0.0",
+    "html-minifier": "^4.0.0",
+    "imagemin": "^8.0.1",
+    "imagemin-cli": "^8.0.0",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-pngquant": "^9.0.0",
+    "postcss-cli": "^9.0.0",
+    "terser": "^5.0.0"
+  }
+}

@@ -1,0 +1,11 @@
+# Padroniza finais de linha e garante consistência entre sistemas operacionais
+* text=auto
+
+# Força LF (padrão Unix) para arquivos de texto
+*.html text eol=lf
+*.css text eol=lf
+*.js text eol=lf
+*.md text eol=lf
+
+# Imagens são tratadas como binárias (sem conversão)
+assets/img/* binary
